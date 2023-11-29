@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 const app = require("./app");
 
 mongoose.set("strictQuery", true);
+const { DB_HOST } = process.env;
 
-const DB_HOST =
-  "mongodb+srv://Svyatoslav:99887766@cluster0.xbriomf.mongodb.net/books_reader";
+// console.log(process.env);
 
 mongoose
   .connect(DB_HOST)
